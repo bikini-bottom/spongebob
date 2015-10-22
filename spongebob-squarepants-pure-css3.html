@@ -1,0 +1,809 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>neoon.es | SpongeBob SquarePants PURE CSS3</title>
+    <!-- http://www.neoon.es/labs/spongebob/ -->
+    <style>
+    @charset "utf-8"; /* Created by Tom Sempere @ neoon.es */
+    /* 2014 */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Titillium Web',sans-serif
+    }
+
+    body {
+        background-color: #FDDB21;
+        padding-top: 20px;
+    }
+
+    #bob {
+        position: relative;
+        width: 500px;
+        height: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #shadow {
+        position: absolute;
+        z-index: -1;
+        top: 510px;
+        left: 0;
+        width: 500px;
+        height: 100px;
+        background: #F9BB04;
+        -moz-border-radius: 250px / 50px;
+        -webkit-border-radius: 250px / 50px;
+        border-radius: 250px / 50px
+    }
+
+    #info {
+        height: 20px;
+        text-align: center;
+        font-size: 14px
+    }
+
+    #info span {
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 11px
+    }
+
+    #head {
+        position: absolute;
+        z-index: 1;
+        left: 65px;
+        width: 340px;
+        height: 335px;
+        background-color: #FDDB21;
+        border: 12px solid #000;
+        border-radius: 12px
+    }
+
+    #eyelashes {
+        position: absolute;
+        left: 55px;
+        top: 35px
+    }
+
+    #el_1 {
+        position: absolute;
+        top: 10px;
+        width: 1px;
+        height: 20px;
+        border: 6px solid #000;
+        border-radius: 12px;
+        background-color: #000;
+        transform: rotate(140deg);
+        -webkit-transform: rotate(140deg);
+        -moz-transform: rotate(140deg);
+        -o-transform: rotate(140deg);
+        -ms-transform: rotate(140deg)
+    }
+
+    #el_2 {
+        position: absolute;
+        left: 40px;
+        width: 1px;
+        height: 20px;
+        border: 6px solid #000;
+        border-radius: 12px;
+        background-color: #000
+    }
+
+    #el_3 {
+        position: absolute;
+        top: 10px;
+        left: 80px;
+        width: 1px;
+        height: 20px;
+        border: 6px solid #000;
+        border-radius: 12px;
+        background-color: #000;
+        transform: rotate(-140deg);
+        -webkit-transform: rotate(-140deg);
+        -moz-transform: rotate(-140deg);
+        -o-transform: rotate(-140deg);
+        -ms-transform: rotate(-140deg)
+    }
+
+    #el_4 {
+        position: absolute;
+        top: 10px;
+        left: 135px;
+        width: 1px;
+        height: 20px;
+        border: 6px solid #000;
+        border-radius: 12px;
+        background-color: #000;
+        transform: rotate(140deg);
+        -webkit-transform: rotate(140deg);
+        -moz-transform: rotate(140deg);
+        -o-transform: rotate(140deg);
+        -ms-transform: rotate(140deg)
+    }
+
+    #el_5 {
+        position: absolute;
+        left: 175px;
+        width: 1px;
+        height: 20px;
+        border: 6px solid #000;
+        border-radius: 12px;
+        background-color: #000
+    }
+
+    #el_6 {
+        position: absolute;
+        top: 10px;
+        left: 215px;
+        width: 1px;
+        height: 20px;
+        border: 6px solid #000;
+        border-radius: 12px;
+        background-color: #000;
+        transform: rotate(-140deg);
+        -webkit-transform: rotate(-140deg);
+        -moz-transform: rotate(-140deg);
+        -o-transform: rotate(-140deg);
+        -ms-transform: rotate(-140deg)
+    }
+
+    #eye_left,#eye_right {
+        width: 120px;
+        height: 120px;
+        background: #FFF;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: 12px solid #000
+    }
+
+    #eyes {
+        position: absolute;
+        top: 58px
+    }
+
+    #eye_left {
+        position: absolute;
+        left: 30px
+    }
+
+    #eye_right {
+        position: absolute;
+        left: 165px
+    }
+
+    #pupil {
+        width: 40px;
+        height: 48px;
+        background: #000;
+        -moz-border-radius: 20px / 24px;
+        -webkit-border-radius: 20px / 24px;
+        border-radius: 20px / 24px;
+        margin-top: 38px;
+        margin-left: 40px
+    }
+
+    #cheeks {
+        position: absolute;
+        z-index: 2;
+        top: 165px
+    }
+
+    #cheek_left,#cheek_right {
+        height: 30px;
+        width: 60px;
+        border-radius: 60px 60px 0 0;
+        -moz-border-radius: 60px 60px 0 0;
+        -webkit-border-radius: 60px 60px 0 0;
+        background-color: #FDDB21;
+        border: 12px solid #000;
+        border-bottom: none
+    }
+
+    #cheek_left {
+        position: absolute;
+        left: 10px
+    }
+
+    #cheek_right {
+        position: absolute;
+        left: 245px
+    }
+
+    #freckles_left,#freckles_right {
+        position: relative
+    }
+
+    .freckle1 {
+        width: 12px;
+        height: 12px;
+        background: #E10101;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        left: 12px
+    }
+
+    .freckle2 {
+        width: 12px;
+        height: 12px;
+        background: #E10101;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        left: 34px
+    }
+
+    .freckle3 {
+        width: 12px;
+        height: 12px;
+        background: #E10101;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 32px;
+        left: 23px
+    }
+
+    #nose {
+        position: absolute;
+        top: 130px;
+        left: 137px;
+        height: 60px;
+        width: 40px;
+        border-radius: 40px 40px 0 0;
+        -moz-border-radius: 40px 40px 0 0;
+        -webkit-border-radius: 40px 40px 0 0;
+        background-color: #FDDB21;
+        border: 12px solid #000;
+        border-bottom: none
+    }
+
+    #mouth {
+        position: absolute;
+        top: 240px;
+        left: 50px;
+        height: 0;
+        width: 225px;
+        border: 6px solid #000;
+        border-radius: 12px
+    }
+
+    #teeth {
+        position: absolute;
+        top: 240px
+    }
+
+    #tooth_left {
+        position: absolute;
+        left: 120px;
+        width: 25px;
+        height: 25px;
+        border: 12px solid #000;
+        border-radius: 12px;
+        background-color: #FFF
+    }
+
+    #tooth_right {
+        position: absolute;
+        left: 165px;
+        width: 25px;
+        height: 25px;
+        border: 12px solid #000;
+        border-radius: 12px;
+        background-color: #FFF
+    }
+
+    #hole1 {
+        width: 35px;
+        height: 35px;
+        background: #FCB421;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 15px;
+        left: 10px
+    }
+
+    #hole2 {
+        width: 20px;
+        height: 20px;
+        background: #FCB421;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 15px;
+        right: 12px
+    }
+
+    #hole3 {
+        width: 20px;
+        height: 20px;
+        background: #FCB421;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 285px;
+        left: 30px
+    }
+
+    #hole4 {
+        width: 35px;
+        height: 35px;
+        background: #FCB421;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 275px;
+        right: 20px
+    }
+
+    #arms {
+        z-index: 0;
+        position: relative
+    }
+
+    #arm_left {
+        position: absolute;
+        left: 30px;
+        top: 250px
+    }
+
+    #arm_right {
+        position: absolute;
+        left: 280px;
+        top: 250px
+    }
+
+    .shoulder {
+        height: 80px;
+        width: 160px;
+        border-radius: 160px 160px 0 0;
+        -moz-border-radius: 160px 160px 0 0;
+        -webkit-border-radius: 160px 160px 0 0;
+        background-color: #FFF;
+        border: 12px solid #000
+    }
+
+    .arm {
+        width: 25px;
+        height: 80px;
+        border: 12px solid #000;
+        background-color: #FDDB21;
+        margin-top: -12px;
+        margin-left: 15px;
+        border-bottom: none;
+        position: absolute;
+        z-index: 1
+    }
+
+    .hand {
+        width: 60px;
+        height: 60px;
+        background-color: #FDDB21;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: 12px solid #000;
+        position: absolute;
+        left: -4px;
+        top: 169px;
+        z-index: 0
+    }
+
+    .arm2 {
+        width: 25px;
+        height: 80px;
+        border: 12px solid #000;
+        background-color: #FDDB21;
+        margin-top: -12px;
+        margin-left: 120px;
+        border-bottom: none;
+        position: absolute;
+        z-index: 1
+    }
+
+    .hand2 {
+        width: 60px;
+        height: 60px;
+        background-color: #FDDB21;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: 12px solid #000;
+        position: absolute;
+        left: 103px;
+        top: 169px;
+        z-index: 0
+    }
+
+    #shirt {
+        position: absolute;
+        top: 347px;
+        left: 90px;
+        width: 290px;
+        height: 28px;
+        border: 12px solid #000;
+        border-radius: 12px;
+        background-color: #FFF
+    }
+
+    #neckline1 {
+        position: absolute;
+        top: -12px;
+        left: 80px;
+        width: 1px;
+        height: 40px;
+        border: 6px solid #000;
+        border-radius: 12px;
+        background-color: #000;
+        transform: rotate(140deg);
+        -webkit-transform: rotate(140deg);
+        -moz-transform: rotate(140deg);
+        -o-transform: rotate(140deg);
+        -ms-transform: rotate(140deg)
+    }
+
+    #neckline2 {
+        position: absolute;
+        top: -12px;
+        left: 100px;
+        width: 1px;
+        height: 40px;
+        border: 6px solid #000;
+        border-radius: 12px;
+        background-color: #000;
+        transform: rotate(40deg);
+        -webkit-transform: rotate(40deg);
+        -moz-transform: rotate(40deg);
+        -o-transform: rotate(40deg);
+        -ms-transform: rotate(40deg)
+    }
+
+    #neckline3 {
+        position: absolute;
+        top: -12px;
+        left: 175px;
+        width: 1px;
+        height: 40px;
+        border: 6px solid #000;
+        border-radius: 12px;
+        background-color: #000;
+        transform: rotate(140deg);
+        -webkit-transform: rotate(140deg);
+        -moz-transform: rotate(140deg);
+        -o-transform: rotate(140deg);
+        -ms-transform: rotate(140deg)
+    }
+
+    #neckline4 {
+        position: absolute;
+        top: -12px;
+        left: 195px;
+        width: 1px;
+        height: 40px;
+        border: 6px solid #000;
+        border-radius: 12px;
+        background-color: #000;
+        transform: rotate(40deg);
+        -webkit-transform: rotate(40deg);
+        -moz-transform: rotate(40deg);
+        -o-transform: rotate(40deg);
+        -ms-transform: rotate(40deg)
+    }
+
+    #trouser {
+        position: absolute;
+        top: 382px;
+        left: 90px;
+        width: 290px;
+        height: 40px;
+        border: 12px solid #000;
+        border-radius: 12px;
+        background-color: #DE732F
+    }
+
+    #costure {
+        position: absolute;
+        top: 13px;
+        left: 30px;
+        width: 30px;
+        height: 1px;
+        border: 6px #000 dashed;
+        border-radius: 12px;
+        background-color: #000
+    }
+
+    #costure2 {
+        position: absolute;
+        top: 13px;
+        left: 90px;
+        width: 30px;
+        height: 1px;
+        border: 6px #000 dashed;
+        border-radius: 12px;
+        background-color: #000
+    }
+
+    #costure3 {
+        position: absolute;
+        top: 13px;
+        left: 150px;
+        width: 30px;
+        height: 1px;
+        border: 6px #000 dashed;
+        border-radius: 12px;
+        background-color: #000
+    }
+
+    #costure4 {
+        position: absolute;
+        top: 13px;
+        left: 210px;
+        width: 30px;
+        height: 1px;
+        border: 6px #000 dashed;
+        border-radius: 12px;
+        background-color: #000
+    }
+
+    #trouser_leg_left {
+        position: absolute;
+        top: 436px;
+        left: 110px;
+        width: 80px;
+        height: 12px;
+        border: 12px solid #000;
+        border-radius: 12px;
+        background-color: #DE732F
+    }
+
+    #trouser_leg_right {
+        position: absolute;
+        top: 436px;
+        left: 279px;
+        width: 80px;
+        height: 12px;
+        border: 12px solid #000;
+        border-radius: 12px;
+        background-color: #DE732F
+    }
+
+    #leg_left {
+        position: absolute;
+        top: 460px;
+        left: 135px;
+        width: 25px;
+        height: 20px;
+        border: 12px solid #000;
+        background-color: #FDDB21
+    }
+
+    #leg_right {
+        position: absolute;
+        top: 460px;
+        left: 307px;
+        width: 25px;
+        height: 20px;
+        border: 12px solid #000;
+        background-color: #FDDB21
+    }
+
+    #sock_left {
+        position: absolute;
+        top: 490px;
+        left: 135px;
+        width: 25px;
+        height: 10px;
+        border: 12px solid #000;
+        background-color: #FFF
+    }
+
+    #sock_right {
+        position: absolute;
+        top: 490px;
+        left: 307px;
+        width: 25px;
+        height: 10px;
+        border: 12px solid #000;
+        background-color: #FFF
+    }
+
+    #shoe_left {
+        position: absolute;
+        top: 515px;
+        left: 75px;
+        width: 100px;
+        height: 60px;
+        background: #000;
+        -moz-border-radius: 50px / 30px;
+        -webkit-border-radius: 50px / 30px;
+        border-radius: 50px / 30px
+    }
+
+    #heel_left {
+        position: absolute;
+        top: 515px;
+        left: 140px;
+        width: 35px;
+        height: 35px;
+        background: #000;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: 12px solid #000
+    }
+
+    #shoe_right {
+        position: absolute;
+        top: 515px;
+        left: 315px;
+        width: 100px;
+        height: 60px;
+        background: #000;
+        -moz-border-radius: 50px / 30px;
+        -webkit-border-radius: 50px / 30px;
+        border-radius: 50px / 30px
+    }
+
+    #heel_right {
+        position: absolute;
+        top: 515px;
+        left: 290px;
+        width: 35px;
+        height: 35px;
+        background: #000;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: 12px solid #000
+    }
+
+    #tie {
+        position: relative;
+        z-index: 2;
+        top: 359px;
+        left: 226px;
+        width: 16px
+    }
+
+    #tie_top {
+        height: 0;
+        width: 20px;
+        border-bottom: 20px solid #FE0000;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg)
+    }
+
+    #tie_middle {
+        margin-left: -5px;
+        height: 0;
+        width: 20px;
+        border-bottom: 50px solid #FE0000;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent
+    }
+
+    #tie_bottom {
+        width: 0;
+        height: 0;
+        margin-left: -5px;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 20px solid red
+    }
+    </style>
+</head>
+<body>
+<div id="bob">
+    <div id="head">
+        <div id="eyelashes">
+            <div id="el_1"></div>
+            <div id="el_2"></div>
+            <div id="el_3"></div>
+            <div id="el_4"></div>
+            <div id="el_5"></div>
+            <div id="el_6"></div>
+        </div> 
+        <div id="eyes">         
+            <div id="eye_left">
+                <div id="pupil"></div>
+            </div>
+            <div id="eye_right">
+                <div id="pupil"></div>
+            </div>            
+        </div>
+        <div id="cheeks">
+            <div id="cheek_left">
+                <div id="freckles_left">
+                    <div class="freckle1"></div>
+                    <div class="freckle2"></div>
+                    <div class="freckle3"></div>
+                </div>
+            </div>
+            <div id="cheek_right">
+                <div id="freckles_right">
+                    <div class="freckle1"></div>
+                    <div class="freckle2"></div>
+                    <div class="freckle3"></div>
+                </div>
+            </div>
+        </div>
+        <div id="nose"></div>
+        <div id="mouth"></div>
+        <div id="teeth">
+            <div id="tooth_left"></div>
+            <div id="tooth_right"></div>            
+        </div> 
+        <div id="hole1"></div>
+        <div id="hole2"></div>
+        <div id="hole3"></div>
+        <div id="hole4"></div>      
+    </div>
+    <div id="arms">
+        <div id="arm_left">
+            <div class="shoulder">
+            </div>
+            <div class="arm">
+            </div>
+            <div class="hand">
+            </div>
+        </div>
+        <div id="arm_right">
+            <div class="shoulder">
+            </div>
+            <div class="arm2">
+            </div>
+            <div class="hand2">
+            </div>
+        </div>
+    </div>
+    <div id="shirt">
+        <div id="neckline1"></div>
+        <div id="neckline2"></div>
+        <div id="neckline3"></div>
+        <div id="neckline4"></div>
+    </div>
+    <div id="trouser">
+        <div id="costure"></div>
+        <div id="costure2"></div>
+        <div id="costure3"></div>
+        <div id="costure4"></div>
+    </div>
+    <div id="trouser_leg_left"></div>
+    <div id="trouser_leg_right"></div>
+    <div id="leg_left"></div>
+    <div id="leg_right"></div>
+    <div id="sock_left"></div>
+    <div id="sock_right"></div>
+    <div id="shoe_left"></div>
+    <div id="heel_left"></div>
+    <div id="shoe_right"></div>
+    <div id="heel_right"></div>
+    <div id="tie">
+        <div id="tie_top"></div>
+        <div id="tie_middle"></div>
+        <div id="tie_bottom"></div>
+    </div>
+    <div id="shadow"></div>
+</div>
+<div id="info">SPONGEBOB SQUAREPANTS PURE CSS3<br><span>&copy;2014 neoon.es</span></div>
+</body>
+</html>
